@@ -75,9 +75,10 @@ const SHOWING = "showing",
 
 function handleLogoEdite(event){
     localStorage.removeItem(LOGO);
-    logo_form.classList.add(SHOWING);
+   // logo_form.classList.add(SHOWING);
     logo.classList.remove(SHOWING);
     logo_input.value ="";
+    askForLogo();
 }
 function EditeLogo(){
     logo.addEventListener("click",handleLogoEdite);
