@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>my project-calculator</title>
+       <link rel="stylesheet" href = "style.css"/>
+    </head>
+    <body>
+        <div class = "scr_size">
+            <span>Screen size Too Big!!!</span>
+        </div>
+        <form class = "logo-form">
+            <div>
+            <input class="logo-input showing" type="text" placeholder="What is your name?">
+            </div>
+        </form>
+
+        <div class="cal">
+                <form class = "calcul">
+                        <input class ="input_text" type ="text" pattern="[0-9/\+\-\*%\.√]+" placeholder="input">
+                    
+                    
+                    <div class="grid">
+                        <div>
+                            <span class = "logo" title ="logo edit"></span>
+                        </div>
+                        <div class="buttons">
+                            <table id = "btn_elements">
+                                <tbody>
+                                    <tr>
+                                        <!-- <td id="tia"><input class="btn_ON_C btn" type="button" value="ON/C"></td> -->
+                                        <td id="tia_a"><input class="btn_7 btn" type="button" value="7"></td>
+                                        <td id="tia_b"><input class="btn_8 btn" type="button" value="8"></td>
+                                        <td id="tia_c"><input class="btn_9 btn" type="button" value="9"></td>
+                                        <td id="tia_d"><input class="btn_divide btn" type="button" value="÷"></td>
+                                        <td id="tia_e"><input class="btn_√ btn" type="button" value="√" title ="숫자의 앞이나 뒤에 작성해주세요."></td>
+
+                                    </tr>
+                                    <tr>
+                                        <!-- <td id="tib"><input class="btn_MR_C btn" type="button" value="MR/C"></td> -->
+                                        <td id="tib_a"><input class="btn_4 btn" type="button" value="4"></td>
+                                        <td id="tib_b"><input class="btn_5 btn" type="button" value="5"></td>
+                                        <td id="tib_c"><input class="btn_6 btn" type="button" value="6"></td>
+                                        <td id="tib_d"><input class="btn_multiply btn" type="button" value="×"></td>
+                                        <td id="tib_e"><input class="btn_percent btn" type="button" value="%"></td>
+                                    </tr>
+                                    <tr>
+                                        <!-- <td id="tic"><input class="btn_M1 btn" type="button" value="M-"></td> -->
+                                        <td id="tic_a"><input class="btn_1 btn" type="button" value="1"></td>
+                                        <td id="tic_b"><input class="btn_2 btn" type="button" value="2"></td>
+                                        <td id="tic_c"><input class="btn_3 btn" type="button" value="3"></td>
+                                        <td id="tic_d"><input class="btn_minus btn" type="button" value="－"></td>
+                                        <td id="tic_e"><input class="btn_C btn" type="button" value="C"></td>
+                                    </tr>
+                                    <tr>
+                                        <!-- <td id="tid"><input class="btn_M2 btn" type="button" value="M+"></td> -->
+                                        <td id="tid_a"><input class="btn_0 btn" type="button" value="0"></td>
+                                        <td id="tid_b"><input class="btn_dot btn" type="button" value="."></td>
+                                        <td id="tid_c"><input class="btn_equal btn" type="submit" value="="></td>
+                                        <td id="tid_d"><input class="btn_plus btn" type="button" value="＋"></td>
+                                        <td id="tid_e"><input class="btn_CE btn" type="button" value="CE"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            <div class="circle"></div>
+        </div>
+    
+        <script src ="cal.js"></script>
+        
+    </body>
+</html>

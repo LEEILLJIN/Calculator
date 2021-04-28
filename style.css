@@ -1,0 +1,107 @@
+.scr_size {
+    position: absolute;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    background-color: blueviolet;
+    /* background-size: cover; */
+    /* backface-visibility: hidden; */
+    /* background-repeat: no-repeat; */
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: white;
+    text-shadow: 0px 1px 1px black;
+  }
+  @media screen and (max-width: 800px) {
+    .scr_size {
+      display: none;
+    }
+  }
+  .grid{
+      margin-top: 15px;
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      height: 0px;
+  }
+.cal{
+    width: 500px;
+    height: 300px;
+    background-color: teal;
+}
+.circle{
+    z-index: 0;
+    float: right;
+    width:250px;
+    height:232px;
+    border-radius: 100% 0px 0px ;
+    background-color: rgb(9, 145, 81);
+}
+.logo-input{
+    background-color: teal;
+    border:none;
+    height: 25px;
+}
+
+.logo{
+    margin-top: 20px;
+    writing-mode: vertical-lr;
+    letter-spacing: 5px;
+    color : white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.logo-form,
+.logo
+{
+    display: none;
+}
+.logo{
+    margin-left: 1px;
+}
+.showing{
+    display: block;
+}
+
+.buttons{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.input_text{
+    background-color: rgb(121, 134, 134);
+    margin-left:80px;
+    margin-top: 20px;
+    width: 300px;
+    height: 30px;
+    border: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:white;
+
+}
+
+::placeholder{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn{
+    background-color: rgb(121, 134, 134);
+    border:hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:white;
+    font-size: 20px;
+    background: transparent;
+    margin-bottom: 20px;
+    margin-right: 45px;
+}
+.btn:hover{
+    background-color: rgba(255, 255, 255, 0.452);
+}
+.btn:active{
+    background-color: rgba(255, 255, 255, 0.082);
+}
+.btn_8{
+    margin-top: 5px;
+}
+
