@@ -69,13 +69,145 @@ const  logo_form=document.querySelector(".logo-form"),
         logo_input = logo_form.querySelector(".logo-input"),
         logo = document.querySelector(".logo");
 
+const cal= document.querySelector(".cal"),
+    circle = document.querySelector(".circle");
+
 const SHOWING = "showing",
         LOGO = "logo";
 
+const color_btn = document.querySelector(".controls_colors"),
+    c1 = color_btn.querySelector(".c1"),
+    c2 = color_btn.querySelector(".c2"),
+    c3 = color_btn.querySelector(".c3"),
+    c4 = color_btn.querySelector(".c4"),
+    c5 = color_btn.querySelector(".c5"),
+    c6 = color_btn.querySelector(".c6"),
+    c7 = color_btn.querySelector(".c7"),
+    c8 = color_btn.querySelector(".c8");
 
+const C_1 ="c1",
+    C_2 ="c2",
+    C_3 ="c3",
+    C_4 ="c4",
+    C_5 ="c5",
+    C_6 ="c6",
+    C_7 ="c7",
+    C_8 ="c8";
+
+function handlecolor(event){
+    const color = event.target;
+    let clickcolor = color.id;
+    let i =0;
+    let cur_calclass = cal.classList;
+    let cur_circleclass = circle.classList;
+    for(i=0; i<cur_calclass.length; i++){
+        if(cur_calclass[i] === C_1){
+            cal.classList.remove(C_1);
+        }
+        if(cur_calclass[i] === C_2){
+            cal.classList.remove(C_2);
+        }
+        if(cur_calclass[i] === C_3){
+            cal.classList.remove(C_3);
+        }
+        if(cur_calclass[i] === C_3){
+            cal.classList.remove(C_3);
+        }
+        if(cur_calclass[i] === C_4){
+            cal.classList.remove(C_4);
+        }
+        if(cur_calclass[i] === C_5){
+            cal.classList.remove(C_5);
+        }
+        if(cur_calclass[i] === C_6){
+            cal.classList.remove(C_6);
+        }
+        if(cur_calclass[i] === C_7){
+            cal.classList.remove(C_7);
+        }
+        if(cur_calclass[i] === C_8){
+            cal.classList.remove(C_8);
+        }  
+
+    }
+    for(i=0; i<cur_circleclass.length; i++){
+        if(cur_circleclass[i] === C_1){
+            circle.classList.remove(C_1);
+        }
+        if(cur_circleclass[i] === C_2){
+            circle.classList.remove(C_2);
+        }
+        if(cur_circleclass[i] === C_3){
+            circle.classList.remove(C_3);
+        }
+        if(cur_circleclass[i] === C_3){
+            circle.classList.remove(C_3);
+        }
+        if(cur_circleclass[i] === C_4){
+            circle.classList.remove(C_4);
+        }
+        if(cur_circleclass[i] === C_5){
+            circle.classList.remove(C_5);
+        }
+        if(cur_circleclass[i] === C_6){
+            circle.classList.remove(C_6);
+        }
+        if(cur_circleclass[i] === C_7){
+            circle.classList.remove(C_7);
+        }
+        if(cur_circleclass[i] === C_8){
+            circle.classList.remove(C_8);
+        }  
+
+    }
+    switch(clickcolor){
+        case "1":
+            cal.classList.add(C_1);
+            circle.classList.add(C_1);
+            break;
+        case "2":
+            cal.classList.add(C_2);
+            circle.classList.add(C_2);
+            break;
+        case "3":
+            cal.classList.add(C_3);
+            circle.classList.add(C_3);
+            break;
+        case "4":
+            cal.classList.add(C_4);
+            circle.classList.add(C_4);
+            break;
+        case "5":
+            cal.classList.add(C_5);
+            circle.classList.add(C_5);
+            break; 
+        case "6":
+            cal.classList.add(C_6);
+            circle.classList.add(C_6);
+            break;      
+        case "7":
+            cal.classList.add(C_7);
+            circle.classList.add(C_7);
+            break;                     
+        case "8":
+            cal.classList.add(C_8);
+            circle.classList.add(C_8);
+            break;
+    }
+}
+function contorlcolor(){
+    c1.addEventListener("click",handlecolor);
+    c2.addEventListener("click",handlecolor);
+    c3.addEventListener("click",handlecolor);
+    c4.addEventListener("click",handlecolor);
+    c5.addEventListener("click",handlecolor);
+    c6.addEventListener("click",handlecolor);
+    c7.addEventListener("click",handlecolor);
+    c8.addEventListener("click",handlecolor);
+}
 function handleLogoEdite(event){
     localStorage.removeItem(LOGO);
-   // logo_form.classList.add(SHOWING);
+   // logo_form.classList.add(SHOWING); 이게 여기있고 밑에 askForLogo가 없으면 첫번째 edit에서 고친 logo가 submit이 안된다.
     logo.classList.remove(SHOWING);
     logo_input.value ="";
     askForLogo();
@@ -89,7 +221,6 @@ function saveLogo(text){
 function paintLogo(text){
     logo.classList.add(SHOWING);
     logo.innerText = text;
-    console.log(logo.value);
     EditeLogo();
 }
 
@@ -118,7 +249,7 @@ function loadLogo(){
 
 function btnHandle(event){
     const btn = event.target;//event가 일어난 곳을 반환
-    var currentbtn = btn.value;
+    let currentbtn = btn.value;
    // let currentInputValue=[];
     // currentInputValue.push(localStorage.getItem(INPUT));
     // currentInputValue.push(currentbtn);
@@ -258,7 +389,7 @@ function handleSubmit(event){
 function calculate(text){
     //java script 내장함수 eval() : ()안의 식을 계산해줌 연산자 우선순위도 고려해줌
     const currentInput=text.split(/(["\-","+","/","*"])/);//구분자가 ()를 포함하는 정규표현식일 경우, 포획된 결과도 배열에 포함된다.
-    var i = 0;
+    let i = 0;
     let stack1=[];
     let stack2=[];
     var top1 = -1;
@@ -347,7 +478,7 @@ function calculate(text){
             } 
         j++;
     }
-    var finalresult = stack2[top2--]
+    let finalresult = stack2[top2--]
     paintResult(finalresult);
     return finalresult;
 }
@@ -376,5 +507,6 @@ function init(){
     inputText();
     btnOnclick();
     loadLogo();
+    contorlcolor();
 }
 init();

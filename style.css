@@ -19,8 +19,105 @@
     .scr_size {
       display: none;
     }
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f9fc;
+}
+.controls_colors{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top : 20px;
+      width: 500px;
+      height: 300px;
+
+}
+.controls_color{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+}
+.controls_color.c1{
+    background: linear-gradient(90deg, teal 50%, rgb(9, 145, 81) 50%);
   }
-  .grid{
+.controls_color.c2{
+    background: linear-gradient(90deg, rgb(120, 94, 8) 50%, rgb(243, 201, 145) 50%);
+}
+.controls_color.c3{
+    background: linear-gradient(90deg, #D810DC 50%, #F670C5 50%);
+      
+ }
+.controls_color.c4{
+    background: linear-gradient(90deg, #055E95 50%, #A2F2F2 50%);
+      
+  }
+.controls_color.c5{
+    background: linear-gradient(90deg, #5B6B02 50%, #F4F4B0 50%);
+
+  }
+.controls_color.c6{
+    background: linear-gradient(90deg, #842D04 50%, #F69595 50%);
+      
+  }
+.controls_color.c7{
+    background: linear-gradient(90deg, #660384 50%, #B87AF3 50%);
+      
+}
+.controls_color.c8{
+    background: linear-gradient(90deg, rgba(26, 90, 5, 0.653) 50%, rgb(157, 248, 138) 50%);
+}
+.cal.c1{
+    background-color: teal;
+}
+.cal.c2{
+    background-color: rgb(120, 94, 8);
+}
+.cal.c3{
+    background-color: #D810DC;
+}
+.cal.c4{
+    background-color: #055E95;
+}
+.cal.c5{
+    background-color: #5B6B02;
+}
+.cal.c6{
+    background-color: #842D04;
+}
+.cal.c7{
+    background-color: #660384;
+}
+.cal.c8{
+    background-color: rgb(26, 90, 5, 0.653);
+}
+.circle.c1{
+    background-color: rgb(9, 145, 81);
+}
+.circle.c2{
+    background-color: rgb(243, 201, 145);
+}
+.circle.c3{
+    background-color: #F670C5;
+}
+.circle.c4{
+    background-color: #A2F2F2;
+}
+.circle.c5{
+    background-color: #F4F4B0;
+}
+.circle.c6{
+    background-color: #F69595;
+}
+.circle.c7{
+    background-color: #B87AF3;
+}
+.circle.c8{
+    background-color: rgb(157, 248, 138);
+}
+.grid{
       margin-top: 15px;
       display: grid;
       grid-template-columns: 50px 1fr;
@@ -32,10 +129,9 @@
     background-color: teal;
 }
 .circle{
-    z-index: 0;
     float: right;
     width:250px;
-    height:232px;
+    height:233px;
     border-radius: 100% 0px 0px ;
     background-color: rgb(9, 145, 81);
 }
@@ -52,6 +148,9 @@
     color : white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
+}
+.logo:hover{
+    cursor: pointer;
 }
 .logo-form,
 .logo
@@ -70,7 +169,8 @@
     margin-top: 10px;
 }
 .input_text{
-    background-color: rgb(121, 134, 134);
+    background-color: rgb(165, 174, 174);
+    
     margin-left:80px;
     margin-top: 20px;
     width: 300px;
@@ -86,7 +186,6 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .btn{
-    background-color: rgb(121, 134, 134);
     border:hidden;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:white;
