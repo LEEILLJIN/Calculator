@@ -39,7 +39,9 @@ body{
       width: 40px;
       height: 40px;
       border-radius: 50%;
+      cursor: pointer;    
 }
+
 .controls_color.c1{
     background: linear-gradient(90deg, teal 50%, rgb(9, 145, 81) 50%);
   }
@@ -136,9 +138,10 @@ body{
     background-color: rgb(9, 145, 81);
 }
 .logo-input{
-    background-color: teal;
+    background-color: rgb(165, 174, 174);
     border:none;
     height: 25px;
+    
 }
 
 .logo{
@@ -170,7 +173,6 @@ body{
 }
 .input_text{
     background-color: rgb(165, 174, 174);
-    
     margin-left:80px;
     margin-top: 20px;
     width: 300px;
