@@ -138,9 +138,10 @@ body{
     background-color: rgb(9, 145, 81);
 }
 .logo-input{
-    background-color: rgb(165, 174, 174);
+    background-color: rgb(165, 174, 174, 0.5);
     border:none;
     height: 25px;
+    width: 120px;
     
 }
 
@@ -172,7 +173,7 @@ body{
     margin-top: 10px;
 }
 .input_text{
-    background-color: rgb(165, 174, 174);
+    background-color: rgb(165, 174, 174, 0.5);
     margin-left:80px;
     margin-top: 20px;
     width: 300px;
